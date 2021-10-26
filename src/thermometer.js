@@ -1,3 +1,4 @@
+/* eslint-disable no-else-return */
 /* eslint-disable no-useless-constructor */
 /* eslint-disable getter-return */
 /* eslint-disable class-methods-use-this */
@@ -115,7 +116,15 @@ class Thermometer {
    *
    */
   toString(unit) {
-    // write your code here
+    if (unit === 'C') {
+      return `${this.celsius}°${unit}`;
+    } else if (unit === 'K') {
+      return `${this.kelvin}${unit}`;
+    } else if (unit === 'F') {
+      return `${this.fahrenheit}°${unit}`;
+    } else {
+      return `${this.celsius}°C`;
+    }
   }
 }
 
