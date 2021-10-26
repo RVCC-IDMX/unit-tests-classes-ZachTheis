@@ -27,13 +27,14 @@
  */
 class Thermometer {
   // write your code here for the private class field called celsius
+  #celsius;
 
   /**
    * @constructor
    * @param {number} celsius
    */
   constructor(celsius) {
-    // write your code here
+    this.celcius = celsius;
   }
 
   /*  -------- celsius -------------------*/
@@ -44,17 +45,17 @@ class Thermometer {
    * @description - returns the celsius temperature
    * */
   get celsius() {
-    // write your code here
+    return this.celsius;
   }
 
   /**
    * @setter celsius
-   * @param {number} celsius
+   * @param {number} tempCelsius
    * @memberof Thermometer
    * @description - sets the celsius temperature
    */
   set celsius(tempCelsius) {
-    // write your code here
+    this.celcius = tempCelsius;
   }
 
   /*  -------- kelvin -------------------*/
