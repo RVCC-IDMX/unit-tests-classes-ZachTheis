@@ -29,28 +29,29 @@
  */
 class Polygon {
   constructor(sides) {
-    // write your code here
+    this.name = 'Polygon';
+    this.sides = sides;
   }
 
   /**
    * @returns {number} - number of sides
    */
   count() {
-    // write your code here
+    return this.sides.length;
   }
 
   /**
    * @returns {number} - value of the perimeter (sum of all sides)
    */
   perimeter() {
-    // write your code here
+    return this.sides.reduce((cursor, next) => cursor + next);
   }
 
   /**
    * @returns {string} - name of the polygon
    */
   sayName() {
-    // write your code here
+    return this.name;
   }
 }
 
