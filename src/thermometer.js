@@ -34,7 +34,7 @@ class Thermometer {
    * @param {number} celsius
    */
   constructor(celsius) {
-    this.celcius = celsius;
+    this.#celsius = celsius;
   }
 
   /*  -------- celsius -------------------*/
@@ -45,7 +45,7 @@ class Thermometer {
    * @description - returns the celsius temperature
    * */
   get celsius() {
-    return this.celsius;
+    return this.#celsius;
   }
 
   /**
@@ -55,7 +55,7 @@ class Thermometer {
    * @description - sets the celsius temperature
    */
   set celsius(tempCelsius) {
-    this.celcius = tempCelsius;
+    this.#celsius = tempCelsius;
   }
 
   /*  -------- kelvin -------------------*/
@@ -66,7 +66,7 @@ class Thermometer {
    * @description - returns the kelvin temperature
    */
   get kelvin() {
-    // write your code here
+    return this.celsius + 273.15;
   }
 
   /**
@@ -76,7 +76,7 @@ class Thermometer {
    * @description - sets the kelvin temperature
    */
   set kelvin(tempKelvin) {
-    // write your code here
+    this.celsius = tempKelvin - 273.15;
   }
 
   /*  -------- fahrenheit -------------------*/
@@ -87,7 +87,7 @@ class Thermometer {
    * @description - returns the fahrenheit temperature
    */
   get fahrenheit() {
-    // write your code here
+    return (this.celsius * 9) / 5 + 32;
   }
 
   /**
@@ -97,7 +97,7 @@ class Thermometer {
    * @description - sets the fahrenheit temperature
    */
   set fahrenheit(tempFahrenheit) {
-    // write your code here
+    this.celsius = ((tempFahrenheit - 32) * 5) / 9;
   }
 
   /**
